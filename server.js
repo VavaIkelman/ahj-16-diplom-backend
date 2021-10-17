@@ -41,41 +41,41 @@ const wsServer = new WS.Server({ server });
 
 // DATABASE
 const dB = [
-  {id: '001', message: 'Белеет парус одинокий в тумане моря голубом', date: Date.now() - 500000000, geo: '', type: 'text'},
-  {id: '002', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque massa vitae libero luctus, et luctus orci consequat. Fusce fringilla venenatis dapibus.', date: Date.now() - 450000000, geo: '', type: 'text'},
+  {id: '001', message: 'Брифинг по теме сознания', date: Date.now(), geo: '', type: 'text'},
+  {id: '002', message: 'Ссылки 1 http://ya.ru 2 https://meduza.io 3 https://google.com 4 http://mail.ru', date: Date.now() - 300000000, geo: '', type: 'text'},
   {id: '003', message: 'Тanki грязи не боятся', date: Date.now() - 400000000, geo: '', type: 'text'},
   {id: '004', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque massa vitae libero luctus, et luctus orci consequat. Fusce fringilla venenatis dapibus. Praesent eget sagittis augue. Pellentesque ac nunc dolor. Nullam tortor ipsum, laoreet mattis leo et, congue porttitor magna. Aliquam quis elit sem. Integer semper tristique nisl, ac elementum felis accumsan consequat.', date: Date.now() - 400000000, geo: '', type: 'text'},
   {id: '005', message: 'Координаты там и сям', date: Date.now() - 350000000, geo: '55.692493, 37.607834', type: 'text'},
-  {id: '006', message: 'Ссылки 1 http://ya.ru 2 https://yandex.ru 3 https://google.com 4 http://vk.com', date: Date.now() - 300000000, geo: '', type: 'text'},
-  {id: '007', message: 'magma.jpeg', date: Date.now() - 250000000, geo: '', type: 'image'},
+  {id: '006', message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque massa vitae libero luctus, et luctus orci consequat. Fusce fringilla venenatis dapibus.', date: Date.now() - 450000000, geo: '', type: 'text'},
+  {id: '007', message: 'Белеет парус одинокий в тумане моря голубом', date: Date.now() - 500000000, geo: '', type: 'text'},
   {id: '008', message: 'cat.mp4', date: Date.now() - 200000000, type: 'video'},
-  {id: '009', message: 'frends.mp3', date: Date.now() - 150000000, geo: '59.514793, 28.142395', type: 'audio'},
-  {id: '010', message: 'minds_trick.pdf', date: Date.now() - 100000000, geo: '', type: 'file'},
-  {id: '011', message: 'Телефончик', date: Date.now(), geo: '', type: 'text'},
-  {id: '012', message: 'moto.gif', date: Date.now() - 110000000, geo: '', type: 'image'},
+  {id: '009', message: 'minds_trick.pdf', date: Date.now() - 100000000, geo: '', type: 'file'},
+  {id: '010', message: 'magma.jpeg', date: Date.now() - 250000000, geo: '', type: 'image'},
+  {id: '011', message: 'moto.gif', date: Date.now() - 110000000, geo: '', type: 'image'},
+  {id: '012', message: 'frends.mp3', date: Date.now() - 150000000, geo: '59.514793, 28.142395', type: 'audio'},
 ];
 const category = {
   links: [
-    { name: 'http://ya.ru', messageId: '006' },
-    { name: 'https://yandex.ru', messageId: '006' },
-    { name: 'https://google.com', messageId: '006' },
-    { name: 'http://vk.com', messageId: '006' },
+    { name: 'http://ya.ru', messageId: '002' },
+    { name: 'https://meduza.io', messageId: '002' },
+    { name: 'https://google.com', messageId: '002' },
+    { name: 'http://mail.ru', messageId: '002' },
   ],
   image: [
-    { name: 'magma.jpg', messageId: '007' },
-    { name: 'moto.gif', messageId: '012' },
+    { name: 'magma.jpg', messageId: '010' },
+    { name: 'moto.gif', messageId: '011' },
   ],
   video: [
     { name: 'cat.mp4', messageId: '008' },
   ],
   audio: [
-    { name: 'frends.mp3', messageId: '009' },
+    { name: 'frends.mp3', messageId: '012' },
   ],
   file: [
-    { name: 'minds_trick.pdf', messageId: '010' },
+    { name: 'minds_trick.pdf', messageId: '009' },
   ],
 };
-const  favourites = new Set(['005', '007', '008', '011']);
+const  favourites = new Set(['008', '010', '011', '012']);
 
 
 const clients = [];
